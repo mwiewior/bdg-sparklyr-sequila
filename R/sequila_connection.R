@@ -8,5 +8,5 @@ sequila_connect <- function(master) {
 }
 
 sequila_disconnect <- function(session){
-  spark_disconnect(ss$connection)
+  spark_disconnect(ss$sc)
 }
