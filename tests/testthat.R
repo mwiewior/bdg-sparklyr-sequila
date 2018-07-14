@@ -1,4 +1,3 @@
-install.packages("sparklyr")
 library(testthat)
 library(sequila)
 
