@@ -6,5 +6,5 @@ test_that("test SeQuiLa connection", {
   ss<-sequila_connect(master,driver_memory=driver_mem)
   expect_equal(ss$sc$master, master)
   expect_equal(ss$sc$config$`sparklyr.shell.driver-memory`, driver_mem)
-  sequila_disconnect()
+  sequila_disconnect(ss)
 })
