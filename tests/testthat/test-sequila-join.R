@@ -3,7 +3,8 @@ context("test-sequila-join.R")
 master <- "local[1]"
 driver_mem="1g"
 ss<-sequila_connect(master,driver_memory=driver_mem)
-
+library(sparklyr)
+library(dplyr)
 test_that("test SeQuiLa join", {
 
   sequila_sql(ss,query="CREATE DATABASE sequila")
