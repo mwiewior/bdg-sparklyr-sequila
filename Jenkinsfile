@@ -106,6 +106,7 @@ node {
  }
  catch (e){currentBuild.result="FAIL"}
  stage('Notify'){
+
     buildColor = currentBuild.result == null ? "good" : "danger"
     buildStatus = currentBuild.result == null ? "SUCCESS:clap:" : currentBuild.result+":cry:"
 
