@@ -6,7 +6,6 @@ sequilaEnv$config$sparklyr.defaultPackages <- paste("org.biodatageeks","bdg-sequ
 sequilaEnv$config$sparklyr.shell.repositories <-"https://zsibio.ii.pw.edu.pl/nexus/repository/maven-snapshots/,https://zsibio.ii.pw.edu.pl/nexus/repository/maven-releases/"
 
 .onLoad <- function(libname, pkgname){
-  install.packages("sparklyr")
   library(sparklyr)
   spark_install(version=sequilaEnv$sparkVersion)
   packageStartupMessage(paste("SeQuiLa-sparklyr",sequilaEnv$version, sep=" "))
